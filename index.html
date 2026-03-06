@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple CI/CD demonstration website">
+    <title>CI/CD Demo Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <h1>CI/CD Demo</h1>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <h2>Welcome to CI/CD Automation</h2>
+                <p>This website demonstrates continuous integration and deployment using GitHub Actions</p>
+                <a href="#features" class="btn">Learn More</a>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2>About This Project</h2>
+                <p>This is a simple static website built to demonstrate CI/CD pipelines using GitHub Actions. Every push to the main branch triggers automated validation and deployment.</p>
+                <div class="stats">
+                    <div class="stat-card">
+                        <h3>Automated</h3>
+                        <p>Build & Deploy</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Validated</h3>
+                        <p>HTML & CSS</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Tested</h3>
+                        <p>Link Checking</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="container">
+                <h2>CI/CD Features</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h3>Automatic Validation</h3>
+                        <p>HTML and CSS are automatically validated on every commit to ensure code quality.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Link Testing</h3>
+                        <p>All links are checked to prevent broken navigation and external references.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>GitHub Pages Deploy</h3>
+                        <p>Successful builds are automatically deployed to GitHub Pages for instant availability.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Status Monitoring</h3>
+                        <p>Build status badges provide instant visibility into the health of the project.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Get Started</h2>
+                <p>Ready to implement CI/CD for your project? Check out the GitHub repository to see how it is done.</p>
+                <a href="https://github.com" class="btn btn-secondary">View on GitHub</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 CI/CD Demo Project. Built with GitHub Actions.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
