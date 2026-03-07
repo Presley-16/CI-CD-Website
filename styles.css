@@ -4,7 +4,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 :root {
     --primary-color: #2563eb;
     --secondary-color: #1e40af;
@@ -13,19 +12,16 @@
     --white: #fff;
     --shadow: 0 4px 6px rgb(0 0 0 / 10%);
 }
-
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
 }
-
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
-
 /* Header and Navigation */
 header {
     background-color: var(--white);
@@ -34,37 +30,61 @@ header {
     top: 0;
     z-index: 100;
 }
-
 nav {
     padding: 1rem 0;
 }
-
 nav .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
 nav h1 {
     color: var(--primary-color);
     font-size: 1.5rem;
 }
-
 .nav-links {
     display: flex;
     list-style: none;
     gap: 2rem;
 }
-
 .nav-links a {
     color: var(--text-color);
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
 }
-
 .nav-links a:hover {
     color: var(--primary-color);
+}
+
+/* ============================================
+   FIX 1 (errors at line 116 & 229):
+   "section h2" moved BEFORE ".hero h2" so the
+   less-specific selector precedes the more-specific one.
+   FIX 2 (error at line 211):
+   "footer p" moved BEFORE ".hero p" for the same reason.
+   ============================================ */
+
+/* Sections — must precede .hero overrides */
+section {
+    padding: 4rem 0;
+}
+section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--text-color);
+}
+
+/* Footer — must precede .hero p override */
+footer {
+    background-color: var(--text-color);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem 0;
+}
+footer p {
+    opacity: 0.9;
 }
 
 /* Hero Section */
@@ -74,18 +94,15 @@ nav h1 {
     padding: 6rem 0;
     text-align: center;
 }
-
 .hero h2 {
     font-size: 3rem;
     margin-bottom: 1rem;
 }
-
 .hero p {
     font-size: 1.25rem;
     margin-bottom: 2rem;
     opacity: 0.95;
 }
-
 /* Buttons */
 .btn {
     display: inline-block;
@@ -97,47 +114,29 @@ nav h1 {
     font-weight: 600;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 12px rgb(0 0 0 / 15%);
 }
-
 .btn-secondary {
     background-color: var(--primary-color);
     color: var(--white);
 }
-
-/* Sections */
-section {
-    padding: 4rem 0;
-}
-
-section h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    color: var(--text-color);
-}
-
 /* About Section */
 .about {
     background-color: var(--light-bg);
 }
-
 .about p {
     text-align: center;
     max-width: 800px;
     margin: 0 auto 3rem;
     font-size: 1.1rem;
 }
-
 .stats {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
 }
-
 .stat-card {
     background-color: var(--white);
     padding: 2rem;
@@ -146,24 +145,20 @@ section h2 {
     box-shadow: var(--shadow);
     transition: transform 0.3s ease;
 }
-
 .stat-card:hover {
     transform: translateY(-5px);
 }
-
 .stat-card h3 {
     color: var(--primary-color);
     font-size: 2rem;
     margin-bottom: 0.5rem;
 }
-
 /* Features Section */
 .feature-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
 }
-
 .feature-card {
     background-color: var(--white);
     padding: 2rem;
@@ -171,65 +166,44 @@ section h2 {
     box-shadow: var(--shadow);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .feature-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgb(0 0 0 / 15%);
 }
-
 .feature-card h3 {
     color: var(--primary-color);
     margin-bottom: 1rem;
     font-size: 1.5rem;
 }
-
 .feature-card p {
     color: #6b7280;
     line-height: 1.7;
 }
-
 /* Contact Section */
 .contact {
     background-color: var(--light-bg);
     text-align: center;
 }
-
 .contact p {
     max-width: 600px;
     margin: 0 auto 2rem;
     font-size: 1.1rem;
 }
-
-/* Footer */
-footer {
-    background-color: var(--text-color);
-    color: var(--white);
-    text-align: center;
-    padding: 2rem 0;
-}
-
-footer p {
-    opacity: 0.9;
-}
-
 /* Responsive Design */
 @media (width <= 768px) {
     .nav-links {
         gap: 1rem;
     }
-
-    .hero h2 {
-        font-size: 2rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
+    /* FIX 3 (line 229): section h2 before .hero h2 inside media query too */
     section h2 {
         font-size: 2rem;
     }
-
+    .hero h2 {
+        font-size: 2rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
     .feature-grid,
     .stats {
         grid-template-columns: 1fr;
