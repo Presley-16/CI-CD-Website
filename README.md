@@ -1,12 +1,12 @@
 # CI/CD Demo Website
 
-[![CI/CD Pipeline](https://github.com/YOUR-USERNAME/YOUR-REPO-NAME/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR-USERNAME/YOUR-REPO-NAME/actions/workflows/ci.yml)
+[![CI/CD Pipeline](https://github.com/Presley-16/CI-CD-Website/actions/workflows/ci.yml/badge.svg)](https://github.com/Presley-16/CI-CD-Website/actions/workflows/ci.yml)
 
 A demonstration of Continuous Integration and Continuous Deployment (CI/CD) using GitHub Actions for a simple static website.
 
 ## 🌐 Live Demo
 
-Visit the live website: [https://YOUR-USERNAME.github.io/YOUR-REPO-NAME/](https://YOUR-USERNAME.github.io/YOUR-REPO-NAME/)
+Visit the live website: [https://presley-16.github.io/CI-CD-Website/](https://presley-16.github.io/CI-CD-Website/)
 
 ## 📋 Table of Contents
 
